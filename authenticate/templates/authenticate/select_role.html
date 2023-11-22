@@ -1,0 +1,14 @@
+<!-- user_app/templates/user_app/select_role.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Role</title>
+</head>
+<body>
+    <h2>Select Role</h2>
+    {% for user_type in user_types %}
+        <a href="{% url 'task_list' role=user_type.role %}">{{ user_type.role|capfirst }}</a><br>
+    {% endfor %}
+</body>
+</html>

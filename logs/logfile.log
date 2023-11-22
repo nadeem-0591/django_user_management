@@ -1,0 +1,29 @@
+INFO 2023-11-22 19:13:14,701 autoreload Watching for file changes with StatReloader
+INFO 2023-11-22 19:17:45,329 autoreload C:\Users\shaik\Desktop\management\management\management\settings.py changed, reloading.
+INFO 2023-11-22 19:18:15,103 autoreload Watching for file changes with StatReloader
+INFO 2023-11-22 19:19:55,288 autoreload Watching for file changes with StatReloader
+ERROR 2023-11-22 19:20:00,003 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\shaik\Desktop\management\myenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\shaik\Desktop\management\management\authenticate\middlewares.py", line 37, in __call__
+    if request.user.is_authenticated:
+AttributeError: 'WSGIRequest' object has no attribute 'user'
+INFO 2023-11-22 19:21:04,965 autoreload C:\Users\shaik\Desktop\management\management\authenticate\middlewares.py changed, reloading.
+INFO 2023-11-22 19:21:05,695 autoreload Watching for file changes with StatReloader
+INFO 2023-11-22 19:21:09,056 middlewares {"event": "Request Start", "method": "GET", "path": "/", "timestamp": "2023-11-22 19:21:09", "username": "shaik", "phone": null}
+INFO 2023-11-22 19:21:09,135 middlewares {"event": "Request End", "method": "GET", "path": "/", "timestamp": "2023-11-22 19:21:09", "username": "shaik", "phone": null, "status_code": 302, "duration": "0.08s", "view_function": "RedirectView"}
+INFO 2023-11-22 19:21:09,174 middlewares {"event": "Request Start", "method": "GET", "path": "/authenticate/login/", "timestamp": "2023-11-22 19:21:09", "username": "shaik", "phone": null}
+INFO 2023-11-22 19:21:09,187 middlewares {"event": "Request End", "method": "GET", "path": "/authenticate/login/", "timestamp": "2023-11-22 19:21:09", "username": "shaik", "phone": null, "status_code": 200, "duration": "0.01s", "view_function": "user_login"}
+INFO 2023-11-22 19:21:11,828 middlewares {"event": "Request Start", "method": "POST", "path": "/authenticate/login/", "timestamp": "2023-11-22 19:21:11", "username": "shaik", "phone": null}
+INFO 2023-11-22 19:21:12,049 middlewares {"event": "Request End", "method": "POST", "path": "/authenticate/login/", "timestamp": "2023-11-22 19:21:12", "username": "shaik", "phone": null, "status_code": 302, "duration": "0.22s", "view_function": "user_login"}
+INFO 2023-11-22 19:21:12,089 middlewares {"event": "Request Start", "method": "GET", "path": "/authenticate/select_role/", "timestamp": "2023-11-22 19:21:12", "username": "shaik", "phone": null}
+INFO 2023-11-22 19:21:12,093 middlewares {"event": "Request End", "method": "GET", "path": "/authenticate/select_role/", "timestamp": "2023-11-22 19:21:12", "username": "shaik", "phone": null, "status_code": 200, "duration": "0.00s", "view_function": "select_role"}
+INFO 2023-11-22 19:21:13,876 middlewares {"event": "Request Start", "method": "GET", "path": "/authenticate/tasks/supervisor/", "timestamp": "2023-11-22 19:21:13", "username": "shaik", "phone": null}
+INFO 2023-11-22 19:21:13,888 middlewares {"event": "Request End", "method": "GET", "path": "/authenticate/tasks/supervisor/", "timestamp": "2023-11-22 19:21:13", "username": "shaik", "phone": null, "status_code": 200, "duration": "0.01s", "view_function": "task_list"}
+INFO 2023-11-22 19:21:15,718 middlewares {"event": "Request Start", "method": "GET", "path": "/authenticate/create_task/supervisor/", "timestamp": "2023-11-22 19:21:15", "username": "shaik", "phone": null}
+INFO 2023-11-22 19:21:15,727 middlewares {"event": "Request End", "method": "GET", "path": "/authenticate/create_task/supervisor/", "timestamp": "2023-11-22 19:21:15", "username": "shaik", "phone": null, "status_code": 200, "duration": "0.01s", "view_function": "create_task"}
+INFO 2023-11-22 19:21:28,791 middlewares {"event": "Request Start", "method": "POST", "path": "/authenticate/create_task/supervisor/", "timestamp": "2023-11-22 19:21:28", "username": "shaik", "phone": null}
+INFO 2023-11-22 19:21:28,815 middlewares {"event": "Request End", "method": "POST", "path": "/authenticate/create_task/supervisor/", "timestamp": "2023-11-22 19:21:28", "username": "shaik", "phone": null, "status_code": 302, "duration": "0.02s", "view_function": "create_task"}
+INFO 2023-11-22 19:21:28,847 middlewares {"event": "Request Start", "method": "GET", "path": "/authenticate/tasks/supervisor/", "timestamp": "2023-11-22 19:21:28", "username": "shaik", "phone": null}
+INFO 2023-11-22 19:21:28,860 middlewares {"event": "Request End", "method": "GET", "path": "/authenticate/tasks/supervisor/", "timestamp": "2023-11-22 19:21:28", "username": "shaik", "phone": null, "status_code": 200, "duration": "0.01s", "view_function": "task_list"}

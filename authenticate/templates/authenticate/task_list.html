@@ -1,0 +1,32 @@
+<!-- user_app/templates/user_app/task_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task List</title>
+</head>
+<body>
+    <h2>{{ role|capfirst }} Task List</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {% if task.title %}
+                    {{ task.title }}
+                {% else %}
+                    No title
+                {% endif %}
+                - Assigned to:
+                {% if task.assigned_to and task.assigned_to.username %}
+                    {{ task.assigned_to.username }}
+                {% else %}
+                    No assigned user
+                {% endif %}
+                {% if task.due_date %}
+                    - Due Date: {{ task.due_date }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_task' role=role %}">Create Task</a>
+</body>
+</html>

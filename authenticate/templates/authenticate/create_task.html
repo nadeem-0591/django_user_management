@@ -1,0 +1,31 @@
+<!-- user_app/templates/authenticate/create_task.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Task</title>
+</head>
+<body>
+    <h2>Create Task</h2>
+    <form method="post" action="{% url 'create_task' role=role %}">
+        {% csrf_token %}
+        <label for="title">Title:</label>
+        <input type="text" name="title" required><br>
+
+        <label for="description">Description:</label>
+        <textarea name="description" required></textarea><br>
+
+        <label for="assigned_to">Assigned To:</label>
+        <select name="assigned_to" required>
+            {% for user in users %}
+                <option value="{{ user.username }}">{{ user.username }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="due_date">Due Date:</label>
+        <input type="date" name="due_date"><br>  <!-- Add this line for the due date -->
+
+        <button type="submit">Create Task</button>
+    </form>
+</body>
+</html>
